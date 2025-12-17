@@ -3,7 +3,13 @@ from django.urls import path
 from django.http import JsonResponse
 
 def api_teste(request):
-    return JsonResponse({"status": "ok", "mensagem": "Deploy funcionando no PythonAnywhere!"})
+    return JsonResponse(
+        
+        {
+  "status": "ok",
+  "mensagem": "Deploy funcionando no Render!"
+}
+)
 
 urlpatterns = [
     path('', api_teste),
