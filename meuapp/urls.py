@@ -3,13 +3,7 @@ from django.urls import path
 from django.http import JsonResponse
 
 def api_teste(request):
-    return JsonResponse(
-        
-        {
-  "status": "ok",
-  "mensagem": "Deploy funcionando no Render!"
-}
-)
+    1 / 0  # erro proposital
 
 urlpatterns = [
     path('', api_teste),
