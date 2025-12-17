@@ -9,17 +9,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config("DEBUG", default=False, cast=bool)
 
 # ALLOWED_HOSTS: List of strings representing the host/domain names that this Django site can serve.
 ALLOWED_HOSTS = [
-    "127.0.0.1", 
-    "localhost", 
+    "127.0.0.1",
+    "localhost",
     ".onrender.com",  # Subdomínios do Render
-    '0.0.0.0',
+    "0.0.0.0",
 ]
 
 # Application definition
@@ -69,7 +69,7 @@ WSGI_APPLICATION = "meuapp.wsgi.application"
 
 DATABASES = {
     "default": dj_database_url.config(
-        default=config('DATABASE_URL')  # Variável de ambiente do Render
+        default=config("DATABASE_URL")  # Variável de ambiente do Render
     )
 }
 
@@ -118,4 +118,4 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 # Configure WhiteNoise para servir arquivos estáticos em produção
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

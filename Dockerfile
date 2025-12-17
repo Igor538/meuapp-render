@@ -1,14 +1,15 @@
-FROM python:3.12
+# Dockerfile
+FROM python:3.11-slim
 
-# Instalar dependências do sistema
-RUN apt-get update && apt-get install -y gdal-bin libgdal-dev
+# Definir diretório de trabalho
+WORKDIR /app
 
-# Copiar requirements.txt e instalar pacotes Python
+# Copiar requirements e instalar dependências
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copiar o código
+# Copiar código do projeto
 COPY . .
 
-# Comando para iniciar o app
-CMD ["gunicorn", "meuapp.wsgi:application"]
+# Comando padrão
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
