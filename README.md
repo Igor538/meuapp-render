@@ -28,20 +28,20 @@
 ## 🐳 Rodando localmente com Docker
 
 ```bash
-Construir os containers:
-# docker-compose build
+# Construir os containers:
+docker-compose build
 
-Subir os containers:
-# docker-compose up -d
+# Subir os containers:
+docker-compose up -d
 
-Verificar se estão rodando:
-# docker ps
+# Verificar se estão rodando:
+docker ps
 
-Acessar a aplicação:
-# http://localhost:8000
+# Acessar a aplicação:
+http://localhost:8000
 
-Rodar testes:
-# docker-compose run tests
+# Rodar testes:
+docker-compose run tests
 ```
 
 ## ⚡ Comandos úteis
